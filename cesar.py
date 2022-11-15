@@ -4,11 +4,11 @@ def encrypt(k, m):
 def decrypt(k, m):
     return ''.join(map(chr, (x - k for x in map(ord, m))))
 
-code = input("Введите текст: ")
+code = input("Введите текст, который хотите зашифровать шифром Цезаря: ")
 key = int(input("Введите смещение: "))
 codecs = encrypt(key, code)
 decodecs = decrypt(key, codecs)
 
-print(code)
-print(codecs)
-print(decodecs)
+print('Введённый текст:',code)
+print('Закодированный текст:',codecs)
+print('Расшифрованный текст:',decodecs)
